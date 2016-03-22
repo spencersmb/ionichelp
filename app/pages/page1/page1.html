@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+  <h2>Welcome to Ionic - Thank you for the help!!</h2>
+  <p>
+    This is a list that is ready to be hooked up to a firebase DB. Data comes in through my service where I setup firebase. I've created an observable send the result of the firebase call to the observable stream, then loop through it on the front end using the async pipe.
+  </p>
+  <p>Firebase JS was added in the index file</p>
+  <p>Here is a <a href="https://dl.dropboxusercontent.com/u/10729686/data-structure.png" target="_blank"> snapshot of the data structure in FB</a> I had setup so you can see how I am making the DB call in the service - should make more sense.</p>
+
+  <ion-list>
+    <button *ngFor="#note of notes$ | async" ion-item>
+      <h2>{{note.name}}</h2>
+      <p>{{note.message}}</p>
+    </button>
+  </ion-list>
+
+</ion-content>
