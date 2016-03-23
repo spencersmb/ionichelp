@@ -23,7 +23,7 @@ export class MessageService {
     constructor(
         private _http: Http
     ) {
-        this.firebaseUrl = 'https://glcsmsdev.firebaseio.com';
+        this.firebaseUrl = 'https://.firebaseio.com';
         this.ref = new Firebase(this.firebaseUrl);
     }
     getGroupNotes(name, subname){
