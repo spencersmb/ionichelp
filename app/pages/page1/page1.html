@@ -17,4 +17,18 @@
     </button>
   </ion-list>
 
+  <hr>
+
+  <div>2nd list directive</div>
+  <!-- loop through second variable -->
+  <ul>
+    <post-item
+      *ngFor="#post of filteredPosts"
+      [post]="post"
+      (toggled)="refresh($event)"
+    >
+    </post-item>
+  </ul>
+
+
 </ion-content>
